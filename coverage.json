@@ -1,0 +1,306 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-27T16:45:52.280Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 14,
+    "implemented": 13,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Implement a visually striking global design theme for the SNU Technologies corporate website: dark navy/charcoal backgrounds with electric teal and gold accent colors, sharp geometric shapes, bold sans-serif typography, subtle grid/circuit-board texture overlays, and smooth scroll-reveal animations on section entry. Apply this theme consistently across all sections.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/tailwind.config.js",
+          "frontend/src/index.css",
+          "frontend/src/hooks/useScrollReveal.ts"
+        ],
+        "matchedFiles": [
+          "frontend/tailwind.config.js",
+          "frontend/src/index.css",
+          "frontend/src/hooks/useScrollReveal.ts"
+        ]
+      },
+      {
+        "id": "REQ-10",
+        "summary": "Build a sticky top navigation bar with the SNU Technologies logo/wordmark on the left and navigation links to each section (Home, About, Services, Core Technologies, Development, Clients, Contact Us) on the right. The navbar should become opaque with a background blur on scroll. Include a mobile hamburger menu for small screens.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Navbar.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Navbar.tsx"
+        ]
+      },
+      {
+        "id": "REQ-11",
+        "summary": "Build a site footer with the SNU Technologies name, address, phone, and email, along with copyright text '© 2024 SNU Technologies Inc. All rights reserved.'",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Footer.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Footer.tsx"
+        ]
+      },
+      {
+        "id": "REQ-12",
+        "summary": "Implement a backend contact form submission handler in the Motoko main actor. Expose a public method `submitContactForm(name: Text, email: Text, phone: Text, company: Text, message: Text) : async Bool` that stores form submissions in a stable array. Expose a query method `getContactSubmissions() : async [ContactSubmission]` to retrieve all submissions.",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-13",
+        "summary": "Wire the contact form on the frontend to call the backend `submitContactForm` canister method using the actor hook. On successful submission, clear the form and display a success confirmation message. On error, display an error message.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Contact.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Contact.tsx"
+        ]
+      },
+      {
+        "id": "REQ-14",
+        "summary": "Render all generated static images from frontend/public/assets/generated/ as appropriate: hero background in the Hero section, intro illustration in the Introduction section, service icons in the Services section cards, core technology icons in the Core Technologies tiles, development illustration in the Development section, and client logos in the Clients carousel.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Hero.tsx",
+          "frontend/src/components/Introduction.tsx",
+          "frontend/src/components/Services.tsx",
+          "frontend/src/components/CoreTechnologies.tsx",
+          "frontend/src/components/Development.tsx",
+          "frontend/src/components/Clients.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Hero.tsx",
+          "frontend/src/components/Introduction.tsx",
+          "frontend/src/components/Services.tsx",
+          "frontend/src/components/CoreTechnologies.tsx",
+          "frontend/src/components/Development.tsx",
+          "frontend/src/components/Clients.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Build a full-width Hero section at the top of the page with: headline 'Empowering Enterprises with Next-Generation Technology & Elite IT Talent.', sub-headline 'SNU Technologies Inc. bridges the gap between complex digital transformation and business success. From cutting-edge Cloud and Gen AI solutions to strategic IT staffing, we deliver the expertise you need to scale.', a primary CTA button 'Explore Our Solutions' that scrolls to the Services section, and a secondary CTA button 'Hire Top Talent' that scrolls to the Contact section. Include a hero background image (hero-bg.dim_1920x1080.png).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Hero.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Hero.tsx"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Build an Introduction section below the hero with heading 'Driving Innovation, Delivering Excellence.' and body text: 'At SNU Technologies, we understand that modern businesses run on agility, security, and intelligence. Whether you are looking to secure your digital assets, automate workflows with AI, or build a robust team of tech professionals, we are your trusted partner in navigating the digital landscape.' Include a decorative abstract technology illustration (intro-illustration.dim_800x500.png) displayed beside or behind the text.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Introduction.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Introduction.tsx"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Build an About section (id='about') with three subsections: (1) 'About Me' with the text about the founder's vision for disrupting traditional IT consulting; (2) 'Who We Are' describing SNU Technologies as a premier IT solutions and workforce management powerhouse; (3) 'Office Location' with address '208 Mt Park Blvd SW, Issaquah, WA 98027'. Display each subsection with its own heading and body text as provided in the content spec.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/About.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/About.tsx"
+        ]
+      },
+      {
+        "id": "REQ-5",
+        "summary": "Build a Services section (id='services') with two service cards: (1) 'Staffing Solutions' — full body text about US IT staffing, recruitment, bench sales, direct-hire, and contract-to-hire; (2) 'Managed IT Services' — full body text about proactive 24/7 managed services. Each card should have an icon, heading, and body text. Use the service icons (staffing-icon.dim_128x128.png, managed-it-icon.dim_128x128.png).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Services.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Services.tsx"
+        ]
+      },
+      {
+        "id": "REQ-6",
+        "summary": "Build a Core Technologies section listing all 7 technology areas as individual cards or tiles: Cyber Security, Blockchain Management, ServiceNow, Guidewire, Scrum Master / Product Owner / Project & Program Manager, Gen AI / MLOps & AI/ML, and Cloud Technologies. Each tile should display the technology name, a relevant icon, and its descriptive text exactly as provided. Use core technology icons (cybersecurity-icon.dim_96x96.png, blockchain-icon.dim_96x96.png, servicenow-icon.dim_96x96.png, guidewire-icon.dim_96x96.png, agile-icon.dim_96x96.png, ai-ml-icon.dim_96x96.png, cloud-icon.dim_96x96.png).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/CoreTechnologies.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/CoreTechnologies.tsx"
+        ]
+      },
+      {
+        "id": "REQ-7",
+        "summary": "Build a Development section with heading 'Custom Software Engineered for Scale and Performance.' and full body text about SNU Technologies' full-stack development capabilities, SDLC management, and post-launch support as provided in the content spec. Include a supporting abstract code/development illustration (development-illustration.dim_800x500.png).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Development.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Development.tsx"
+        ]
+      },
+      {
+        "id": "REQ-8",
+        "summary": "Build a Clients section with heading 'Trusted by Innovators.' and supporting paragraph text. Display a horizontally scrolling or auto-playing carousel of placeholder client logo images rendered in grayscale by default, transitioning to full color on hover with a smooth CSS transition. Use 6 placeholder client logos (client-logo-1.dim_200x80.png through client-logo-6.dim_200x80.png).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Clients.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Clients.tsx"
+        ]
+      },
+      {
+        "id": "REQ-9",
+        "summary": "Build a Contact Us section (id='contact') with heading 'Let's Build the Future Together.' and subtext. Display company details: address '208 Mt Park Blvd SW, Issaquah, WA 98027', phone '+1 614-285-7155', email 'info@snutek.com'. Include a contact form with fields: Name, Email, Phone, Company, and a 'How can we help you?' message textarea, plus a submit button. Embed a Google Maps iframe for the Issaquah WA location (coordinates: 47.5301° N, 122.0326° W, address: 208 Mt Park Blvd SW, Issaquah, WA 98027). Display the form and map side by side on desktop.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Contact.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Contact.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/main.mo",
+    "build-request.json",
+    "build-template/Dockerfile",
+    "build-template/LICENSE",
+    "build-template/README.md",
+    "build-template/deploy.sh",
+    "build-template/icp.yaml",
+    "build-template/package.json",
+    "build-template/pnpm-lock.yaml",
+    "build-template/pnpm-workspace.yaml",
+    "build-template/scripts/prune-unused-images.js",
+    "build-template/scripts/resize-images.js",
+    "build-template/src/backend/canister.yaml",
+    "build-template/src/backend/system-idl/aaaaa-aa.did",
+    "build-template/src/frontend/canister.yaml",
+    "build-template/src/frontend/components.json",
+    "build-template/src/frontend/env.json",
+    "build-template/src/frontend/eslint-rules/no-bigint-in-query-keys.js",
+    "build-template/src/frontend/eslint-rules/require-internet-identity-provider.js",
+    "build-template/src/frontend/eslint.config.js",
+    "build-template/src/frontend/package.json",
+    "build-template/src/frontend/postcss.config.js",
+    "build-template/src/frontend/src/components/ui/accordion.tsx",
+    "build-template/src/frontend/src/components/ui/alert-dialog.tsx",
+    "build-template/src/frontend/src/components/ui/alert.tsx",
+    "build-template/src/frontend/src/components/ui/aspect-ratio.tsx",
+    "build-template/src/frontend/src/components/ui/avatar.tsx",
+    "build-template/src/frontend/src/components/ui/badge.tsx",
+    "build-template/src/frontend/src/components/ui/breadcrumb.tsx",
+    "build-template/src/frontend/src/components/ui/button.tsx",
+    "build-template/src/frontend/src/components/ui/calendar.tsx",
+    "build-template/src/frontend/src/components/ui/card.tsx",
+    "build-template/src/frontend/src/components/ui/carousel.tsx",
+    "build-template/src/frontend/src/components/ui/chart.tsx",
+    "build-template/src/frontend/src/components/ui/checkbox.tsx",
+    "build-template/src/frontend/src/components/ui/collapsible.tsx",
+    "build-template/src/frontend/src/components/ui/command.tsx",
+    "build-template/src/frontend/src/components/ui/context-menu.tsx",
+    "build-template/src/frontend/src/components/ui/dialog.tsx",
+    "build-template/src/frontend/src/components/ui/drawer.tsx",
+    "build-template/src/frontend/src/components/ui/dropdown-menu.tsx",
+    "build-template/src/frontend/src/components/ui/form.tsx",
+    "build-template/src/frontend/src/components/ui/hover-card.tsx",
+    "build-template/src/frontend/src/components/ui/input-otp.tsx",
+    "build-template/src/frontend/src/components/ui/input.tsx",
+    "build-template/src/frontend/src/components/ui/label.tsx",
+    "build-template/src/frontend/src/components/ui/menubar.tsx",
+    "build-template/src/frontend/src/components/ui/navigation-menu.tsx",
+    "build-template/src/frontend/src/components/ui/pagination.tsx",
+    "build-template/src/frontend/src/components/ui/popover.tsx",
+    "build-template/src/frontend/src/components/ui/progress.tsx",
+    "build-template/src/frontend/src/components/ui/radio-group.tsx",
+    "build-template/src/frontend/src/components/ui/resizable.tsx",
+    "build-template/src/frontend/src/components/ui/scroll-area.tsx",
+    "build-template/src/frontend/src/components/ui/select.tsx",
+    "build-template/src/frontend/src/components/ui/separator.tsx",
+    "build-template/src/frontend/src/components/ui/sheet.tsx",
+    "build-template/src/frontend/src/components/ui/sidebar.tsx",
+    "build-template/src/frontend/src/components/ui/skeleton.tsx",
+    "build-template/src/frontend/src/components/ui/slider.tsx",
+    "build-template/src/frontend/src/components/ui/sonner.tsx",
+    "build-template/src/frontend/src/components/ui/switch.tsx",
+    "build-template/src/frontend/src/components/ui/table.tsx",
+    "build-template/src/frontend/src/components/ui/tabs.tsx",
+    "build-template/src/frontend/src/components/ui/textarea.tsx",
+    "build-template/src/frontend/src/components/ui/toggle-group.tsx",
+    "build-template/src/frontend/src/components/ui/toggle.tsx",
+    "build-template/src/frontend/src/components/ui/tooltip.tsx",
+    "build-template/src/frontend/src/hooks/use-mobile.tsx",
+    "build-template/src/frontend/src/lib/utils.ts",
+    "build-template/src/frontend/tsconfig.json",
+    "build-template/src/frontend/vite.config.js",
+    "build-template/tsconfig.json",
+    "caffeine.lock.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/public/assets/generated/agile-icon.dim_96x96.png",
+    "frontend/public/assets/generated/ai-ml-icon.dim_96x96.png",
+    "frontend/public/assets/generated/blockchain-icon.dim_96x96.png",
+    "frontend/public/assets/generated/client-logo-1.dim_200x80.png",
+    "frontend/public/assets/generated/client-logo-2.dim_200x80.png",
+    "frontend/public/assets/generated/client-logo-3.dim_200x80.png",
+    "frontend/public/assets/generated/cloud-icon.dim_96x96.png",
+    "frontend/public/assets/generated/cybersecurity-icon.dim_96x96.png",
+    "frontend/public/assets/generated/development-illustration.dim_800x500.png",
+    "frontend/public/assets/generated/guidewire-icon.dim_96x96.png",
+    "frontend/public/assets/generated/hero-bg.dim_1920x1080.png",
+    "frontend/public/assets/generated/intro-illustration.dim_800x500.png",
+    "frontend/public/assets/generated/managed-it-icon.dim_128x128.png",
+    "frontend/public/assets/generated/servicenow-icon.dim_96x96.png",
+    "frontend/public/assets/generated/staffing-icon.dim_128x128.png",
+    "frontend/src/App.tsx",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/About.tsx",
+    "frontend/src/components/Clients.tsx",
+    "frontend/src/components/Contact.tsx",
+    "frontend/src/components/CoreTechnologies.tsx",
+    "frontend/src/components/Development.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/Hero.tsx",
+    "frontend/src/components/Introduction.tsx",
+    "frontend/src/components/Navbar.tsx",
+    "frontend/src/components/Services.tsx",
+    "frontend/src/config.ts",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/hooks/useScrollReveal.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/ui-summary.json",
+    "frontend/src/utils/StorageClient.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

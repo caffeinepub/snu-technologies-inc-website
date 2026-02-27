@@ -1,0 +1,267 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "SNU Technologies Inc. Corporate Website - Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Implement global design theme with dark navy/charcoal backgrounds, electric teal and gold accents, geometric shapes, bold typography, grid/circuit-board textures, and scroll-reveal animations",
+      "acceptanceCriteria": [
+        "Dark navy or charcoal base color is used across all sections",
+        "Teal and gold accent colors appear consistently on CTAs, headings, and highlights",
+        "Typography uses a bold, professional sans-serif font throughout",
+        "Scroll-reveal or fade-in animations trigger on section entry",
+        "Design feels cohesive and enterprise-grade across all pages"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Add custom color palette (dark navy/charcoal base, electric teal and gold accents), extend theme with custom fonts (bold sans-serif), and configure any additional design tokens for geometric shapes and textures"
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Apply global base styles with dark backgrounds, import custom fonts, add subtle grid/circuit-board texture overlays as background patterns, and define base typography styles using bold sans-serif fonts"
+        },
+        {
+          "path": "frontend/src/hooks/useScrollReveal.ts",
+          "operation": "create",
+          "description": "Create a custom React hook that detects when elements enter the viewport and triggers scroll-reveal animations using Intersection Observer API"
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Build full-width Hero section with headline, sub-headline, two CTA buttons (scroll to Services and Contact), and hero background image",
+      "acceptanceCriteria": [
+        "Hero section spans full viewport width and has significant height",
+        "Headline and sub-headline text are displayed as specified",
+        "Primary CTA 'Explore Our Solutions' scrolls smoothly to the Services section",
+        "Secondary CTA 'Hire Top Talent' scrolls smoothly to the Contact section",
+        "Hero background image is rendered behind the text"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Hero.tsx",
+          "operation": "create",
+          "description": "Create Hero component with full-width layout, headline 'Empowering Enterprises with Next-Generation Technology & Elite IT Talent.', sub-headline text as specified, primary CTA button 'Explore Our Solutions' with smooth scroll to #services, secondary CTA button 'Hire Top Talent' with smooth scroll to #contact, and background image from frontend/public/assets/generated/hero-bg.dim_1920x1080.png"
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Build Introduction section with heading, body text about SNU Technologies' approach, and decorative technology illustration",
+      "acceptanceCriteria": [
+        "Section heading matches the specified text exactly",
+        "Body paragraph matches the specified text exactly",
+        "Illustration image is rendered in this section"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Introduction.tsx",
+          "operation": "create",
+          "description": "Create Introduction component with heading 'Driving Innovation, Delivering Excellence.', body text about business agility/security/intelligence as specified in BuildRequest, and render the abstract technology illustration from frontend/public/assets/generated/intro-illustration.dim_800x500.png positioned beside or behind the text"
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Build About section with three subsections: About Me (founder vision), Who We Are (company description), and Office Location (Issaquah address)",
+      "acceptanceCriteria": [
+        "Three subsections are visually distinct with individual headings",
+        "About Me body text matches the provided content",
+        "Who We Are body text matches the provided content",
+        "Office Location displays the full address"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/About.tsx",
+          "operation": "create",
+          "description": "Create About component with id='about' containing three distinct subsections: (1) 'About Me' with founder vision text about disrupting IT consulting, (2) 'Who We Are' describing SNU Technologies as IT solutions and workforce management powerhouse, (3) 'Office Location' displaying address '208 Mt Park Blvd SW, Issaquah, WA 98027'. Each subsection has its own heading and body text"
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Build Services section with two service cards: Staffing Solutions and Managed IT Services, each with icon, heading, and descriptive text",
+      "acceptanceCriteria": [
+        "Two service cards are displayed side by side on desktop, stacked on mobile",
+        "Each card shows its icon, heading, and body text as specified",
+        "Section has id='services' for CTA scroll navigation"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Services.tsx",
+          "operation": "create",
+          "description": "Create Services component with id='services' containing two service cards: (1) 'Staffing Solutions' with icon from frontend/public/assets/generated/staffing-icon.dim_128x128.png and full text about US IT staffing/recruitment/bench sales, (2) 'Managed IT Services' with icon from frontend/public/assets/generated/managed-it-icon.dim_128x128.png and text about 24/7 managed services. Layout: side-by-side on desktop, stacked on mobile"
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Build Core Technologies section with 7 technology area tiles, each showing name, icon, and description",
+      "acceptanceCriteria": [
+        "All 7 technology areas are displayed",
+        "Each tile shows the technology name, icon, and description",
+        "Descriptions match the provided content exactly",
+        "Layout is a responsive grid (e.g., 3-4 columns on desktop, 1-2 on mobile)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CoreTechnologies.tsx",
+          "operation": "create",
+          "description": "Create CoreTechnologies component displaying 7 technology tiles in a responsive grid (3-4 columns desktop, 1-2 mobile): Cyber Security (frontend/public/assets/generated/cybersecurity-icon.dim_96x96.png), Blockchain Management (frontend/public/assets/generated/blockchain-icon.dim_96x96.png), ServiceNow (frontend/public/assets/generated/servicenow-icon.dim_96x96.png), Guidewire (frontend/public/assets/generated/guidewire-icon.dim_96x96.png), Scrum Master/Product Owner/PM (frontend/public/assets/generated/agile-icon.dim_96x96.png), Gen AI/MLOps & AI/ML (frontend/public/assets/generated/ai-ml-icon.dim_96x96.png), Cloud Technologies (frontend/public/assets/generated/cloud-icon.dim_96x96.png). Each tile shows technology name, icon, and exact descriptive text from BuildRequest"
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Build Development section with heading about custom software engineering, body text on full-stack capabilities, and supporting illustration",
+      "acceptanceCriteria": [
+        "Section heading matches exactly",
+        "Body text matches the provided content",
+        "Development illustration is rendered in this section"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Development.tsx",
+          "operation": "create",
+          "description": "Create Development component with heading 'Custom Software Engineered for Scale and Performance.', full body text about SNU Technologies' full-stack development capabilities and SDLC management as specified in BuildRequest, and render the abstract code/development illustration from frontend/public/assets/generated/development-illustration.dim_800x500.png"
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Build Clients section with heading, paragraph, and carousel of 6 client logo placeholders (grayscale default, color on hover)",
+      "acceptanceCriteria": [
+        "Client logos are displayed in grayscale by default",
+        "Hovering a logo transitions it to full color smoothly",
+        "Logos are displayed in a carousel or scrollable row",
+        "Heading and paragraph text are shown as specified"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Clients.tsx",
+          "operation": "create",
+          "description": "Create Clients component with heading 'Trusted by Innovators.', supporting paragraph text, and a horizontally scrolling or auto-playing carousel displaying 6 placeholder client logos (frontend/public/assets/generated/client-logo-1.dim_200x80.png through frontend/public/assets/generated/client-logo-6.dim_200x80.png). Apply CSS filter grayscale by default and transition to full color on hover with smooth CSS transition"
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Build Contact Us section with heading, company details, contact form (5 fields + submit), and embedded Google Maps iframe for Issaquah WA location",
+      "acceptanceCriteria": [
+        "All five form fields are present: Name, Email, Phone, Company, Message",
+        "Submit button is present and styled",
+        "Company details (address, phone, email) are displayed",
+        "Google Maps iframe is embedded showing the Issaquah WA location",
+        "Form and map are side-by-side on desktop, stacked on mobile",
+        "Section has id='contact' for CTA scroll navigation"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Contact.tsx",
+          "operation": "create",
+          "description": "Create Contact component with id='contact', heading 'Let's Build the Future Together.', subtext, company details (address '208 Mt Park Blvd SW, Issaquah, WA 98027', phone '+1 614-285-7155', email 'info@snutek.com'), contact form with 5 fields (Name, Email, Phone, Company, Message textarea), submit button, and embedded Google Maps iframe for coordinates 47.5301° N, 122.0326° W (208 Mt Park Blvd SW, Issaquah, WA 98027). Layout: form and map side-by-side on desktop, stacked on mobile"
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Build sticky top navigation bar with logo, section links, scroll-based opacity/blur, and mobile hamburger menu",
+      "acceptanceCriteria": [
+        "Navbar is sticky and remains visible on scroll",
+        "All section links scroll smoothly to their respective sections",
+        "Navbar background changes on scroll for readability",
+        "Mobile hamburger menu opens a dropdown nav on small screens"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Navbar.tsx",
+          "operation": "create",
+          "description": "Create Navbar component with sticky positioning, SNU Technologies logo/wordmark on left, navigation links to sections (Home, About, Services, Core Technologies, Development, Clients, Contact Us) on right with smooth scroll behavior. Add scroll listener to apply opaque background with blur effect when scrolled. Include mobile hamburger menu that opens dropdown nav on small screens"
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Build site footer with company name, address, phone, email, and copyright text",
+      "acceptanceCriteria": [
+        "Footer displays company name, address, phone, and email",
+        "Copyright text is shown",
+        "Footer styling is consistent with the overall theme"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "create",
+          "description": "Create Footer component displaying SNU Technologies name, address '208 Mt Park Blvd SW, Issaquah, WA 98027', phone '+1 614-285-7155', email 'info@snutek.com', and copyright text '© 2024 SNU Technologies Inc. All rights reserved.' styled consistently with the global theme"
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Wire contact form to call backend submitContactForm method, show success confirmation on submit, display error message on failure, and show loading state",
+      "acceptanceCriteria": [
+        "Form submission triggers the backend canister call",
+        "Success state clears the form and shows a confirmation message",
+        "Error state shows a user-friendly error message",
+        "Submit button shows a loading state during the async call"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Contact.tsx",
+          "operation": "modify",
+          "description": "Wire the contact form to call the backend submitContactForm(name, email, phone, company, message) method using the backend actor hook. On successful submission, clear all form fields and display a success confirmation message. On error, display a user-friendly error message. Add loading state to submit button during async call to prevent duplicate submissions"
+        }
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "summary": "Render all generated static images from frontend/public/assets/generated/ in their appropriate sections",
+      "acceptanceCriteria": [
+        "All image assets load correctly from /assets/generated/",
+        "No broken image links",
+        "Images are appropriately sized and styled within their sections"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Hero.tsx",
+          "operation": "modify",
+          "description": "Verify that hero background image frontend/public/assets/generated/hero-bg.dim_1920x1080.png is properly referenced and rendered as a background in the Hero section"
+        },
+        {
+          "path": "frontend/src/components/Introduction.tsx",
+          "operation": "modify",
+          "description": "Verify that intro illustration frontend/public/assets/generated/intro-illustration.dim_800x500.png is properly referenced and rendered in the Introduction section"
+        },
+        {
+          "path": "frontend/src/components/Services.tsx",
+          "operation": "modify",
+          "description": "Verify that service icons frontend/public/assets/generated/staffing-icon.dim_128x128.png and frontend/public/assets/generated/managed-it-icon.dim_128x128.png are properly referenced and rendered in the service cards"
+        },
+        {
+          "path": "frontend/src/components/CoreTechnologies.tsx",
+          "operation": "modify",
+          "description": "Verify that all 7 core technology icons (frontend/public/assets/generated/cybersecurity-icon.dim_96x96.png, frontend/public/assets/generated/blockchain-icon.dim_96x96.png, frontend/public/assets/generated/servicenow-icon.dim_96x96.png, frontend/public/assets/generated/guidewire-icon.dim_96x96.png, frontend/public/assets/generated/agile-icon.dim_96x96.png, frontend/public/assets/generated/ai-ml-icon.dim_96x96.png, frontend/public/assets/generated/cloud-icon.dim_96x96.png) are properly referenced and rendered in the technology tiles"
+        },
+        {
+          "path": "frontend/src/components/Development.tsx",
+          "operation": "modify",
+          "description": "Verify that development illustration frontend/public/assets/generated/development-illustration.dim_800x500.png is properly referenced and rendered in the Development section"
+        },
+        {
+          "path": "frontend/src/components/Clients.tsx",
+          "operation": "modify",
+          "description": "Verify that all 6 client logo placeholders (frontend/public/assets/generated/client-logo-1.dim_200x80.png through frontend/public/assets/generated/client-logo-6.dim_200x80.png) are properly referenced and rendered in the carousel with grayscale-to-color hover effect"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render all section components in order: Navbar (sticky), Hero, Introduction, About, Services, CoreTechnologies, Development, Clients, Contact, Footer. Ensure scroll-reveal animations are applied to sections using the useScrollReveal hook. Configure smooth scroll behavior for navigation"
+        }
+      ]
+    }
+  ]
+}

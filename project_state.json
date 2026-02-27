@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a single-page corporate website for SNU Technologies Inc., an IT consulting and staffing firm. The site includes: Hero section with headline/sub-headline and two CTAs, Introduction section, About section (About Me, Who We Are, Office Location), Services section (Staffing Solutions, Managed IT Services), Core Technologies section (Cyber Security, Blockchain, ServiceNow, Guidewire, Scrum/PM, Gen AI/MLOps, Cloud), Development section, Clients section with grayscale-to-color logo carousel, and Contact Us section with a contact form (Name, Email, Phone, Company, Message) and Google Maps embed of Issaquah WA location.",
+  "architectural_notes": [
+    "Single-page website layout with anchor-based navigation",
+    "Company: SNU Technologies Inc., Address: 208 Mt Park Blvd SW, Issaquah WA 98027, Phone: +1 614-285-7155"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Dark cinematic hero background with abstract digital network nodes, glowing teal circuit lines, and subtle gold light streaks on a deep navy background (hero-bg.dim_1920x1080.png)\n- Abstract technology illustration showing interconnected gears, data streams, and glowing nodes on a dark background with teal and gold accents (intro-illustration.dim_800x500.png)\n- Abstract code editor screen with layered UI components and flowing data pipelines on a dark background (development-illustration.dim_800x500.png)\n- Shield with glowing teal circuit lines icon representing cyber security (cybersecurity-icon.dim_96x96.png)\n- Interconnected chain links with digital nodes icon representing blockchain (blockchain-icon.dim_96x96.png)\n- Stylized gear with workflow arrows icon representing ServiceNow (servicenow-icon.dim_96x96.png)\n- Shield with insurance document and checkmark icon representing Guidewire (guidewire-icon.dim_96x96.png)\n- Agile sprint board with sticky notes and user silhouettes icon (agile-icon.dim_96x96.png)\n- Neural network brain with glowing synapses icon representing AI/ML (ai-ml-icon.dim_96x96.png)\n- Cloud shape with server racks and upward arrows icon representing Cloud Technologies (cloud-icon.dim_96x96.png)\n- People silhouettes with network connections icon representing staffing solutions (staffing-icon.dim_128x128.png)\n- Server rack with monitoring dashboard icon representing managed IT services (managed-it-icon.dim_128x128.png)\n- Abstract corporate technology company logo placeholder grayscale 1 for client carousel (client-logo-1.dim_200x80.png)\n- Abstract corporate technology company logo placeholder grayscale 2 for client carousel (client-logo-2.dim_200x80.png)\n- Abstract corporate technology company logo placeholder grayscale 3 for client carousel (client-logo-3.dim_200x80.png)\n- Abstract corporate technology company logo placeholder grayscale 4 for client carousel (client-logo-4.dim_200x80.png)\n- Abstract corporate technology company logo placeholder grayscale 5 for client carousel (client-logo-5.dim_200x80.png)\n- Abstract corporate technology company logo placeholder grayscale 6 for client carousel (client-logo-6.dim_200x80.png)",
+  "existing_features": [
+    {
+      "id": "feature-implement-a-visually-striking-global-design-theme-for-the-snu-technologies-corporate-website-dark-navy-charcoal-backgrounds-with-electric-teal-and-gold-accent-colors-sharp-geometric-shapes-bold-sans-serif-typography-subtle-grid-circuit-board-texture-overlays-and-smooth-scroll-reveal-animations-on-section-entry-apply-this-theme-consistently-across-all-sections",
+      "title": "Implement a visually striking global design theme for the SNU Technologies corporate website: dark navy/charcoal backgrounds with electric teal and gold accent colors, sharp geometric shapes, bold sans-serif typography, subtle grid/circuit-board texture overlays, and smooth scroll-reveal animations on section entry. Apply this theme consistently across all sections.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-full-width-hero-section-at-the-top-of-the-page-with-headline-empowering-enterprises-with-next-generation-technology-elite-it-talent-sub-headline-snu-technologies-inc-bridges-the-gap-between-complex-digital-transformation-and-business-success-from-cutting-edge-cloud-and-gen-ai-solutions-to-strategic-it-staffing-we-deliver-the-expertise-you-need-to-scale-a-primary-cta-button-explore-our-solutions-that-scrolls-to-the-services-section-and-a-secondary-cta-button-hire-top-talent-that-scrolls-to-the-contact-section-include-a-hero-background-image-hero-bg-dim-1920x1080-png",
+      "title": "Build a full-width Hero section at the top of the page with: headline 'Empowering Enterprises with Next-Generation Technology & Elite IT Talent.', sub-headline 'SNU Technologies Inc. bridges the gap between complex digital transformation and business success. From cutting-edge Cloud and Gen AI solutions to strategic IT staffing, we deliver the expertise you need to scale.', a primary CTA button 'Explore Our Solutions' that scrolls to the Services section, and a secondary CTA button 'Hire Top Talent' that scrolls to the Contact section. Include a hero background image (hero-bg.dim_1920x1080.png).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-an-introduction-section-below-the-hero-with-heading-driving-innovation-delivering-excellence-and-body-text-at-snu-technologies-we-understand-that-modern-businesses-run-on-agility-security-and-intelligence-whether-you-are-looking-to-secure-your-digital-assets-automate-workflows-with-ai-or-build-a-robust-team-of-tech-professionals-we-are-your-trusted-partner-in-navigating-the-digital-landscape-include-a-decorative-abstract-technology-illustration-intro-illustration-dim-800x500-png-displayed-beside-or-behind-the-text",
+      "title": "Build an Introduction section below the hero with heading 'Driving Innovation, Delivering Excellence.' and body text: 'At SNU Technologies, we understand that modern businesses run on agility, security, and intelligence. Whether you are looking to secure your digital assets, automate workflows with AI, or build a robust team of tech professionals, we are your trusted partner in navigating the digital landscape.' Include a decorative abstract technology illustration (intro-illustration.dim_800x500.png) displayed beside or behind the text.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-an-about-section-id-about-with-three-subsections-1-about-me-with-the-text-about-the-founder-s-vision-for-disrupting-traditional-it-consulting-2-who-we-are-describing-snu-technologies-as-a-premier-it-solutions-and-workforce-management-powerhouse-3-office-location-with-address-208-mt-park-blvd-sw-issaquah-wa-98027-display-each-subsection-with-its-own-heading-and-body-text-as-provided-in-the-content-spec",
+      "title": "Build an About section (id='about') with three subsections: (1) 'About Me' with the text about the founder's vision for disrupting traditional IT consulting; (2) 'Who We Are' describing SNU Technologies as a premier IT solutions and workforce management powerhouse; (3) 'Office Location' with address '208 Mt Park Blvd SW, Issaquah, WA 98027'. Display each subsection with its own heading and body text as provided in the content spec.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-services-section-id-services-with-two-service-cards-1-staffing-solutions-full-body-text-about-us-it-staffing-recruitment-bench-sales-direct-hire-and-contract-to-hire-2-managed-it-services-full-body-text-about-proactive-24-7-managed-services-each-card-should-have-an-icon-heading-and-body-text-use-the-service-icons-staffing-icon-dim-128x128-png-managed-it-icon-dim-128x128-png",
+      "title": "Build a Services section (id='services') with two service cards: (1) 'Staffing Solutions' — full body text about US IT staffing, recruitment, bench sales, direct-hire, and contract-to-hire; (2) 'Managed IT Services' — full body text about proactive 24/7 managed services. Each card should have an icon, heading, and body text. Use the service icons (staffing-icon.dim_128x128.png, managed-it-icon.dim_128x128.png).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-core-technologies-section-listing-all-7-technology-areas-as-individual-cards-or-tiles-cyber-security-blockchain-management-servicenow-guidewire-scrum-master-product-owner-project-program-manager-gen-ai-mlops-ai-ml-and-cloud-technologies-each-tile-should-display-the-technology-name-a-relevant-icon-and-its-descriptive-text-exactly-as-provided-use-core-technology-icons-cybersecurity-icon-dim-96x96-png-blockchain-icon-dim-96x96-png-servicenow-icon-dim-96x96-png-guidewire-icon-dim-96x96-png-agile-icon-dim-96x96-png-ai-ml-icon-dim-96x96-png-cloud-icon-dim-96x96-png",
+      "title": "Build a Core Technologies section listing all 7 technology areas as individual cards or tiles: Cyber Security, Blockchain Management, ServiceNow, Guidewire, Scrum Master / Product Owner / Project & Program Manager, Gen AI / MLOps & AI/ML, and Cloud Technologies. Each tile should display the technology name, a relevant icon, and its descriptive text exactly as provided. Use core technology icons (cybersecurity-icon.dim_96x96.png, blockchain-icon.dim_96x96.png, servicenow-icon.dim_96x96.png, guidewire-icon.dim_96x96.png, agile-icon.dim_96x96.png, ai-ml-icon.dim_96x96.png, cloud-icon.dim_96x96.png).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-development-section-with-heading-custom-software-engineered-for-scale-and-performance-and-full-body-text-about-snu-technologies-full-stack-development-capabilities-sdlc-management-and-post-launch-support-as-provided-in-the-content-spec-include-a-supporting-abstract-code-development-illustration-development-illustration-dim-800x500-png",
+      "title": "Build a Development section with heading 'Custom Software Engineered for Scale and Performance.' and full body text about SNU Technologies' full-stack development capabilities, SDLC management, and post-launch support as provided in the content spec. Include a supporting abstract code/development illustration (development-illustration.dim_800x500.png).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-clients-section-with-heading-trusted-by-innovators-and-supporting-paragraph-text-display-a-horizontally-scrolling-or-auto-playing-carousel-of-placeholder-client-logo-images-rendered-in-grayscale-by-default-transitioning-to-full-color-on-hover-with-a-smooth-css-transition-use-6-placeholder-client-logos-client-logo-1-dim-200x80-png-through-client-logo-6-dim-200x80-png",
+      "title": "Build a Clients section with heading 'Trusted by Innovators.' and supporting paragraph text. Display a horizontally scrolling or auto-playing carousel of placeholder client logo images rendered in grayscale by default, transitioning to full color on hover with a smooth CSS transition. Use 6 placeholder client logos (client-logo-1.dim_200x80.png through client-logo-6.dim_200x80.png).",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-contact-us-section-id-contact-with-heading-let-s-build-the-future-together-and-subtext-display-company-details-address-208-mt-park-blvd-sw-issaquah-wa-98027-phone-1-614-285-7155-email-info-snutek-com-include-a-contact-form-with-fields-name-email-phone-company-and-a-how-can-we-help-you-message-textarea-plus-a-submit-button-embed-a-google-maps-iframe-for-the-issaquah-wa-location-coordinates-47-5301-n-122-0326-w-address-208-mt-park-blvd-sw-issaquah-wa-98027-display-the-form-and-map-side-by-side-on-desktop",
+      "title": "Build a Contact Us section (id='contact') with heading 'Let's Build the Future Together.' and subtext. Display company details: address '208 Mt Park Blvd SW, Issaquah, WA 98027', phone '+1 614-285-7155', email 'info@snutek.com'. Include a contact form with fields: Name, Email, Phone, Company, and a 'How can we help you?' message textarea, plus a submit button. Embed a Google Maps iframe for the Issaquah WA location (coordinates: 47.5301° N, 122.0326° W, address: 208 Mt Park Blvd SW, Issaquah, WA 98027). Display the form and map side by side on desktop.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-sticky-top-navigation-bar-with-the-snu-technologies-logo-wordmark-on-the-left-and-navigation-links-to-each-section-home-about-services-core-technologies-development-clients-contact-us-on-the-right-the-navbar-should-become-opaque-with-a-background-blur-on-scroll-include-a-mobile-hamburger-menu-for-small-screens",
+      "title": "Build a sticky top navigation bar with the SNU Technologies logo/wordmark on the left and navigation links to each section (Home, About, Services, Core Technologies, Development, Clients, Contact Us) on the right. The navbar should become opaque with a background blur on scroll. Include a mobile hamburger menu for small screens.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-site-footer-with-the-snu-technologies-name-address-phone-and-email-along-with-copyright-text-2024-snu-technologies-inc-all-rights-reserved",
+      "title": "Build a site footer with the SNU Technologies name, address, phone, and email, along with copyright text '© 2024 SNU Technologies Inc. All rights reserved.'",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-wire-the-contact-form-on-the-frontend-to-call-the-backend-submitcontactform-canister-method-using-the-actor-hook-on-successful-submission-clear-the-form-and-display-a-success-confirmation-message-on-error-display-an-error-message",
+      "title": "Wire the contact form on the frontend to call the backend `submitContactForm` canister method using the actor hook. On successful submission, clear the form and display a success confirmation message. On error, display an error message.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-all-generated-static-images-from-frontend-public-assets-generated-as-appropriate-hero-background-in-the-hero-section-intro-illustration-in-the-introduction-section-service-icons-in-the-services-section-cards-core-technology-icons-in-the-core-technologies-tiles-development-illustration-in-the-development-section-and-client-logos-in-the-clients-carousel",
+      "title": "Render all generated static images from frontend/public/assets/generated/ as appropriate: hero background in the Hero section, intro illustration in the Introduction section, service icons in the Services section cards, core technology icons in the Core Technologies tiles, development illustration in the Development section, and client logos in the Clients carousel.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Hero section with headline, sub-headline, and two CTAs (Explore Our Solutions, Hire Top Talent)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Introduction section: Driving Innovation, Delivering Excellence",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "About section with About Me, Who We Are, and Office Location subsections",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Services section with Staffing Solutions and Managed IT Services",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Core Technologies section listing 7 technology areas",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Development section describing custom software engineering capabilities",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Clients section with grayscale-to-color logo carousel on hover",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Contact Us section with contact form (Name, Email, Phone, Company, Message) and Google Maps embed of Issaquah WA location",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "Implement a backend contact form submission handler in the Motoko main actor. Expose a public method `submitContactForm(name: Text, email: Text, phone: Text, company: Text, message: Text) : async Bool` that stores form submissions in a stable array. Expose a query method `getContactSubmissions() : async [ContactSubmission]` to retrieve all submissions.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "SNU Technologies Inc. Website",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

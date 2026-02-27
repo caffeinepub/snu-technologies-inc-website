@@ -1,0 +1,109 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-27T16:45:52.276Z",
+  "summary": "The implementation covers nearly all specified requirements. The frontend sections, backend Motoko canister, and wiring are all present. A few minor gaps were identified: the Clients carousel uses only 3 of the 6 required logo images (cycling them instead of using all 6 distinct assets), the backend stable storage uses a mutable List rather than a declared stable variable, and the navbar label for Core Technologies uses 'Technologies' instead of the specified 'Core Technologies'. The Google Maps embed is mentioned in the Contact component summary but the truncated diff prevents full verification of the iframe URL targeting the exact address.",
+  "missing_requirements": [
+    {
+      "requirement": "Client carousel must use all 6 placeholder client logos (client-logo-1 through client-logo-6)",
+      "reason": "The Clients.tsx carousel array only references client-logo-1, client-logo-2, and client-logo-3, then duplicates them. client-logo-4, client-logo-5, and client-logo-6 are never referenced.",
+      "evidence": [
+        "frontend/src/components/Clients.tsx"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "requirement": "Submissions must be persisted in stable storage",
+      "reason": "The backend uses List.empty<ContactSubmission>() assigned to a let binding, which is not a stable var declaration. This means submissions will not survive canister upgrades.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "requirement": "Navbar link label for Core Technologies section must read 'Core Technologies'",
+      "reason": "The navbar nav links use the label 'Technologies' rather than 'Core Technologies' as specified in REQ-10.",
+      "evidence": [
+        "frontend/src/components/Navbar.tsx",
+        "frontend/src/components/Footer.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Stats row (500+ Placements Made, 50+ Enterprise Clients, 10+ Years Experience) added to the Hero section",
+      "reason": "The build request does not specify any statistics row in the Hero section. This is extra content not requested.",
+      "evidence": [
+        "frontend/src/components/Hero.tsx"
+      ]
+    },
+    {
+      "description": "Feature pillar checklist (Agility & Speed to Market, Enterprise-Grade Security, AI-Driven Intelligence, Top-Tier Technical Talent) added to the Introduction section",
+      "reason": "The build request specifies only the heading and a specific body paragraph for the Introduction section. The checklist was not requested.",
+      "evidence": [
+        "frontend/src/components/Introduction.tsx"
+      ]
+    },
+    {
+      "description": "Industry trust indicator grid (Finance, Healthcare, Retail, Technology) added below the Clients carousel",
+      "reason": "The build request only specifies heading, paragraph text, and a logo carousel for the Clients section. The industry grid was not requested.",
+      "evidence": [
+        "frontend/src/components/Clients.tsx"
+      ]
+    },
+    {
+      "description": "Highlight pills and CTA arrow links added to each Services card",
+      "reason": "The build request specifies only icon, heading, and body text for each service card. Highlight pills and additional CTAs were not requested.",
+      "evidence": [
+        "frontend/src/components/Services.tsx"
+      ]
+    },
+    {
+      "description": "Feature pills (Full-Stack Engineering, Modern Frameworks, Rapid Deployment, Continuous Support) added to the Development section",
+      "reason": "The build request specifies only heading, body text, and illustration for the Development section. Feature pills were not requested.",
+      "evidence": [
+        "frontend/src/components/Development.tsx"
+      ]
+    },
+    {
+      "description": "caffeine.ai attribution link added to the Footer",
+      "reason": "The build request does not specify any third-party attribution in the footer. The footer requirements are limited to company name, address, phone, email, and copyright text.",
+      "evidence": [
+        "frontend/src/components/Footer.tsx"
+      ]
+    },
+    {
+      "description": "Get Started CTA button added to the desktop navbar",
+      "reason": "The build request only specifies navigation links in the navbar. An additional CTA button was not requested.",
+      "evidence": [
+        "frontend/src/components/Navbar.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.78,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/About.tsx",
+    "frontend/src/components/Clients.tsx",
+    "frontend/src/components/Contact.tsx",
+    "frontend/src/components/CoreTechnologies.tsx",
+    "frontend/src/components/Development.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/Hero.tsx",
+    "frontend/src/components/Introduction.tsx",
+    "frontend/src/components/Navbar.tsx",
+    "frontend/src/components/Services.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/hooks/useScrollReveal.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

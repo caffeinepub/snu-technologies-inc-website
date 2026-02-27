@@ -1,0 +1,17 @@
+{
+  "frontend/src/index.css": "Global styles with OKLCH dark navy/charcoal color system, teal and gold accent tokens, circuit-board grid texture utilities, scroll-reveal animation classes, and Google Fonts import for Inter and Rajdhani.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with Inter/Rajdhani font families, custom teal/gold/navy color palette, glow box shadows, scroll-left and fade-in-up keyframe animations, and card-hover shadow tokens.",
+  "frontend/src/hooks/useScrollReveal.ts": "Custom React hook using IntersectionObserver to trigger CSS scroll-reveal animations when elements enter the viewport.",
+  "frontend/src/hooks/useQueries.ts": "React Query mutation hook for submitting the contact form to the backend canister via the submitContactForm method.",
+  "frontend/src/components/Navbar.tsx": "Sticky top navigation bar with SNU Technologies logo, desktop nav links with hover underline effect, scroll-based opaque/blur background, and mobile hamburger menu.",
+  "frontend/src/components/Hero.tsx": "Full-viewport hero section with background image, circuit overlay, headline, sub-headline, two CTA buttons (Explore Our Solutions / Hire Top Talent), and animated stats row.",
+  "frontend/src/components/Introduction.tsx": "Two-column introduction section with heading, body text about SNU Technologies' mission, feature pillars checklist, and the intro illustration image with decorative corner accents.",
+  "frontend/src/components/About.tsx": "Three-card About section with About Me, Who We Are, and Office Location subsections, each with numbered accent headers and teal/gold top border accents.",
+  "frontend/src/components/Services.tsx": "Two-column services section with Staffing Solutions and Managed IT Services cards, each featuring service icons, full descriptive text, highlight pills, and a CTA link.",
+  "frontend/src/components/CoreTechnologies.tsx": "Responsive grid of 7 technology tiles (Cyber Security, Blockchain, ServiceNow, Guidewire, Agile, Gen AI/ML, Cloud) with icons, names, and descriptions, featuring hover animations.",
+  "frontend/src/components/Development.tsx": "Two-column development section with custom software engineering copy, feature pills, and the development illustration image with decorative corner accents.",
+  "frontend/src/components/Clients.tsx": "Clients section with heading, paragraph, auto-scrolling logo carousel with grayscale-to-color hover effect, and industry trust indicator grid.",
+  "frontend/src/components/Contact.tsx": "Contact section with company details panel, wired contact form (5 fields + submit) calling the backend submitContactForm mutation with loading/success/error states, and embedded Google Maps iframe.",
+  "frontend/src/components/Footer.tsx": "Site footer with SNU Technologies branding, navigation links, contact details, copyright text with dynamic year, and caffeine.ai attribution link with UTM tracking.",
+  "frontend/src/App.tsx": "Root application component that composes all page sections in order: Navbar, Hero, Introduction, About, Services, CoreTechnologies, Development, Clients, Contact, and Footer."
+}
